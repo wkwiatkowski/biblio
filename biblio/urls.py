@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from shelf.views import AuthorListView, BookListView, PublisherListView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^authors/$', AuthorListView.as_view()),
+    url(r'^book/$', BookListView.as_view()),
+    url(r'^publisher/$', PublisherListView.as_view()),
 ]
