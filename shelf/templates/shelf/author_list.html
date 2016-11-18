@@ -2,7 +2,7 @@
 <body>
     <ul>
         {% for author in object_list %}
-        <li><a href="{% url 'author-detail' author.pk %}"</a>{{author.first_name}} {{author.last_name}}</li>
+        <li><a href="{% url 'shelf:author-detail' author.pk %}"</a>{{author.first_name}} {{author.last_name}}</li>
         {% endfor %}
     </ul>
 </body>

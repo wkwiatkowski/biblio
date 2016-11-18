@@ -19,7 +19,7 @@ from shelf.views import AuthorListView, BookListView, PublisherListView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'shelf/', include('shelf.urls'), name='shelf'), 
+    url(r'shelf/', include('shelf.urls', namespace='shelf')), 
 #   url(r'^authors/$', AuthorListView.as_view()),
 #   url(r'^book/$', BookListView.as_view()),
 #   url(r'^publisher/$', PublisherListView.as_view()),
