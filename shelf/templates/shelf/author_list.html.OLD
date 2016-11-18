@@ -1,0 +1,11 @@
+<h2> Lista Autorow </h2>
+<p></p>
+<body>
+    <ol>
+    {% for author in object_list %}
+    <a href="">
+    <li> {{ author.first_name }} {{ author.last_name }}</li>
+    </a>
+    {% endfor %}
+    </ol>
+</body>

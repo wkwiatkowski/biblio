@@ -1,11 +1,9 @@
-<h2> Lista Autorow </h2>
-<p></p>
+<h2> Lista autorow </h2>
 <body>
-    <ol>
-    {% for author in object_list %}
-    <a href="">
-    <li> {{ author.first_name }} {{ author.last_name }}</li>
-    </a>
-    {% endfor %}
-    </ol>
+    <ul>
+        {% for author in object_list %}
+        <li><a href="{% url 'author-detail' author.pk %}"</a>{{author.first_name}} {{author.last_name}}</li>
+        {% endfor %}
+    </ul>
 </body>
+
